@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Separation Machine</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Zeichenkettungstrennungsmaschine</h1>
+        <form action="" onsubmit="return false">
+            <div>
+                <label for="inputText">Zu trennende Zeichenkette:</label>
+                <textarea id="inputText"></textarea>
+            </div>
+            <div>
+                <label for="inputString">Zeichenkette für die Trennungsposition</label>
+                <input type="text" id="inputString">
+            </div>
+            <div>
+                <div>
+                    <input type="radio" id="trennenDavor" name="trennenRadio" required>
+                    <label for="trennenDavor">davor trennen</label>
+                </div>
+                <div>
+                    <input type="radio" id="trennenDanach" name="trennenRadio">
+                    <label for="trennenDanach">danach trennen</label>
+                </div>
+            </div>
+            <button type="button" onclick="trennen()" value="Daten absenden">Daten absenden</button>
+
+        </form>
+        <div>
+            <h2>Ausgabe</h2>
+            <div class="grid">
+                <div>
+                    <h3>Vorderer Teil</h3>
+                    <p id="outputVorne"></p>
+                </div>
+                <div>
+                    <h3>Hinterer Teil</h3>
+                    <p id="outputHinten"></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4>Was nach der zweiten Trennungsposition übrig bleibt</h4>
+            <p id="outputRest"></p></div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
